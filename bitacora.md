@@ -14,6 +14,7 @@ Por eso me he decidido a crear este proyecto y trastear con la consola esperando
 - CPU Intel Core i5-6500 3.20Ghz
 - 8 gb Ram (modelo y frecuencia por definir, no las recuerdo haha)
 - HDD Toshiba 2TB  DT01ACA200
+
 **Sistema Operativo**
 - Elementary OS 8.1
  
@@ -26,10 +27,10 @@ Por eso me he decidido a crear este proyecto y trastear con la consola esperando
 - Debo admitir que fue un proceso un poquito tardado pero en teoria se hizo un copia exacta bit a bit de lo que era mi SD actual, no era 100% necesario pero preferi hacerlo ya que no esta de mas.
 - Descargue el ArkOS R3XS V2.0 (11072025) de AeolusUX.
 - Flashee esa version de ArkOs en la sd con ayuda del comando
- \`\`\`bash 
+```bash 
 # Comando usado paara el flash de micro sd:
 sudo dd if='/home/ds118/Descargas/ArkOS_R35S-R36S_v2.0_11072025_MultiPanel.img' of=/dev/sdb bs=4M status=progress conv=fsync
- \`\`\`
+ ```
  pero mi sorpresa fue que no funciono, honestamente no esperaba mucho ya que en el github de AeolusUx no se menciona que tenga compatibilidad con esta consola en espicifico pero igual no perdia mucho con intentarlo y para sorpresa de nadie la consola no encendio con la sd ya flasheada y con sus particiones correctas insertada dentro de la consola.
 - Como ya todos los que han tenido esta consola saben, esta consola solo contiene una ranura para micro sd, pero investigando en teoria deberia de darle preferencia la consola a el SO que este instalado en la sd antes del que esta en la memoria interna.
 
