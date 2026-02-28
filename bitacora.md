@@ -23,7 +23,11 @@ Por eso me he decidido a crear este proyecto y trastear con la consola esperando
 
 - Para comenzar en este proyecto me he decidido ir por el cambio de Sistema Operativo por el ArkOs para clones y probarlo unos dias a ver que tal funciona y que tan robusto esta y en base a mi criterio y necesidades ir haciendo modificaciones a nivel software.
  Se que no es hacer enchiladas asi que si alguien llega a ver esto y no he subido nada en un año, probablemente mi hiperfocus ya paso y encontre un nuevo sentido a mi vida botando este proyecto por la borda hahaha.
-- Comence haciendo un respaldo de la sd la cual habia ya remplazado hace un par de semanas para evitar poroblemas con la sd normal. El respaldo lo hice desde la terminal utilizando el comando " sudo dd if=/dev/sdb of=~/r36Ultra-logs/backup_factory_MLS.img status=progress " (sin las comillas obviamente)
+- Comence haciendo un respaldo de la sd la cual habia ya remplazado hace un par de semanas para evitar poroblemas con la sd normal. El respaldo lo hice desde la terminal utilizando el comando
+ ```bash
+# Comando usado para crear una imagen de la micro sd por si algo sale mal, poder restablecer nuestras configuraciones y roms
+ sudo dd if=/dev/sdb of=~/r36Ultra-logs/backup_factory_MLS.img status=progress
+ ```
 - Debo admitir que fue un proceso un poquito tardado pero en teoria se hizo un copia exacta bit a bit de lo que era mi SD actual, no era 100% necesario pero preferi hacerlo ya que no esta de mas.
 - Descargue el ArkOS R3XS V2.0 (11072025) de AeolusUX.
 - Flashee esa version de ArkOs en la sd con ayuda del comando
