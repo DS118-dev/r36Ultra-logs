@@ -1,9 +1,9 @@
-#BITACORA -- PROYECTO SOFTMOD R36 ULTRA
+# BITACORA -- PROYECTO SOFTMOD R36 ULTRA
 
 Log de Desarrollo - 27/02/2026
 
 ## PRESENTACION DEL PROYECTO (O ALMENOS UN INTENTO)
-*Este proyecto que tengo en mente es para experimentar, sacarle jugo a la consola R36Ultra (en especifico ya que es con la que cuento por el momento) y poder ayudar a la comunidad.
+Este proyecto que tengo en mente es para experimentar, sacarle jugo a la consola R36Ultra (en especifico ya que es con la que cuento por el momento) y poder ayudar a la comunidad.
 Por el momento tengo algunas ideas tales como: buscar la manera de pasar archivos por ftp o ssh, buscar una manera mas robusta de controlar los Leds RGB que vienen en los Analogos, poder implementar una ventana que nos muestre la temperatura del cpu, entre otras ideas que ire analizando y anotando con el tiempo.
 he investigado en algunos foros, grupos de facebook y videos en Yt y tiktok a ver que dicen acerca de la consola pero muchos solo hablan de lo mismo, respaldar la micro sd y cambiarla, agregar juegos, o pura publicidad de la tiktok shop. 
 No he encontrado mucho contenido sobre softmod en esta consola o nada tan interesante mas que cambiar el SO que por defecto la mayoria al ser clon cambian de EmuEelec a ArkOs par clones.
