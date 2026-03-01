@@ -47,5 +47,21 @@ decidi probar que booteara con los demas archivos DTB que vienen en la particion
 
 ### PROBANDO EL ARKOS4CLONE DE lcdyk0517
 - Descargue la version mas reciente que hay hasta el momento en su github el cual es la version 20260109.
-viene en 3 partes, es importante descargar las 3 partes y descomprimir la primera parte y solito tomara los archivos restantes en las otras partes para tener un archivo unico final. 
+Viene en 3 partes, es importante descargar las 3 partes y descomprimir la primera parte y solito tomara los archivos restantes en las otras partes para tener un archivo unico final.
+- Procedi a flashear de nuevo la micro sd con el nuevo SO aplicando el mismo comando anterior 
+```bash 
+# Comando usado paara el flash de micro sd:
+sudo dd if='/home/ds118/Descargas/ArkOS4Clone-20260109.img.xz' of=/dev/sdb bs=4M status=progress conv=fsync
+ ```
+- Despues de haber flasheado se crean 3 particiones **"BOOT, root, EASY ROMS"** el proximo paso es entrar en la particion boot y ejecutar el archivo **"dtb_selector_win32.exe"** es aqui donde como usuario de linux te topas con pared (la solucion la explicare en otro tema mas delante) aqui debemos seleccionar la marca de de nuestra consola y modelo, despues seleccione ingles.
+- Aqui ya el programa se deberia cerrar y en la raiz de nuestra particion boot podremos ver que ahora tenemos nuevos archivos. Aqui ya no le movemos nada, expulsamos nuestra unidad e introducimos nuestra sd a la consola para despues encenderla y dejarla que solita termine de instalar todo el sistema (puede llegar a ser lento asi que por recomendacion hay que mantener la consola conectada a la corriente para evitar errores).
+- Una vez termine la consola deberia quedarse encendida ya con el nuevo sistema instalado y listo para poder instalar tus "COPIAS DE SEGURIDAD" de tus juegos favoritos
+- Hasta aqui terminamos la instalacion de ArkOs4Clone la cual debo admitir que no es nada compleja teniendo paciencia y siguiendo los pasos antes dichos.
 
+### EL PROBLEMA DEL "dtb_selector_win32.exe" EN LINUX
+
+Para los usuarios de linux ya sabrar que nativamente linux no puede correr ejecutables como este. Por lo que yo procedi a instalar **"wine"**.
+
+> "QUE ES WINE?
+> 
+>Wine (Wine Is Not an Emulator) es una capa de compatibilidad de código abierto que permite ejecutar aplicaciones y juegos de Windows directamente en sistemas Linux, sin necesidad de instalar Windows ni usar máquinas virtuales. En lugar de emular el sistema operativo, traduce las instrucciones del programa de Windows a llamadas compatibles con el núcleo de Linux en tiempo real. Esto permite integrar software .exe nativamente, facilitando el uso de herramientas de diseño, productividad y videojuegos en entornos Linux. Es una herramienta esencial para la transición al software libre sin perder aplicaciones críticas." -Explicacion de Google Gemini
