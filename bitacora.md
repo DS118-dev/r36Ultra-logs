@@ -1,7 +1,5 @@
 # BITACORA -- PROYECTO SOFTMOD R36 ULTRA
 
-Log de Desarrollo - 27/02/2026
-
 ## PRESENTACION DEL PROYECTO (O ALMENOS UN INTENTO)
 Este proyecto que tengo en mente es para experimentar, sacarle jugo a la consola R36Ultra (en especifico ya que es con la que cuento por el momento) y poder ayudar a la comunidad.
 Por el momento tengo algunas ideas tales como: buscar la manera de pasar archivos por ftp o ssh, buscar una manera mas robusta de controlar los Leds RGB que vienen en los Analogos, poder implementar una ventana que nos muestre la temperatura del cpu, entre otras ideas que ire analizando y anotando con el tiempo.
@@ -60,8 +58,31 @@ sudo dd if='/home/ds118/Descargas/ArkOS4Clone-20260109.img.xz' of=/dev/sdb bs=4M
 
 ### EL PROBLEMA DEL "dtb_selector_win32.exe" EN LINUX
 
-Para los usuarios de linux ya sabrar que nativamente linux no puede correr ejecutables como este. Por lo que yo procedi a instalar **"wine"**.
+Para los usuarios de linux ya sabran que nativamente linux no puede correr ejecutables como este. Por lo que yo procedi a instalar **"wine"**.
 
 > "QUE ES WINE?
 > 
->Wine (Wine Is Not an Emulator) es una capa de compatibilidad de código abierto que permite ejecutar aplicaciones y juegos de Windows directamente en sistemas Linux, sin necesidad de instalar Windows ni usar máquinas virtuales. En lugar de emular el sistema operativo, traduce las instrucciones del programa de Windows a llamadas compatibles con el núcleo de Linux en tiempo real. Esto permite integrar software .exe nativamente, facilitando el uso de herramientas de diseño, productividad y videojuegos en entornos Linux. Es una herramienta esencial para la transición al software libre sin perder aplicaciones críticas." -Explicacion de Google Gemini
+>Wine (Wine Is Not an Emulator) es una capa de compatibilidad de código abierto que permite ejecutar aplicaciones y juegos de Windows directamente en sistemas Linux, sin necesidad de instalar Windows ni usar máquinas virtuales. En lugar de emular el sistema operativo, traduce las instrucciones del programa de Windows a llamadas compatibles con el núcleo de Linux en tiempo real. Esto permite integrar software .exe nativamente, facilitando el uso de herramientas de diseño, productividad y videojuegos en entornos Linux. Es una herramienta esencial para la transición al software libre sin perder aplicaciones críticas." 
+>-Explicacion de Google Gemini
+
+-Debes tener instalado las librerias de wine32 
+```bash
+# Comandos utilizados para instalar wine32
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install wine
+sudo apt install wine32
+```
+
+### SOLUCION PARA EJECUTAR "dtb_selector_win32.exe" EN LINUX
+-Abre una terminal en la raiz de la particion "**BOOT**" y ahi ejecutar el siguiente comando
+```bash
+# Comando utilizado para ejecutar "dtb_selector_win32.exe" 
+wine '/media/ds118/BOOT/dtb_selector_win32.exe'
+```
+y si todo esta correcto ahi deberia de ejecutar el dtb selector sobre la misma terminal 
+
+### INSTALACION FINALIZADA
+-En este punto ya tenemos instalado ArkOs4Clone y listo para jugar o configurarlo  a gusto de cada quien
+-Hasta aqui doy por finalizado este proceso para poder dar inicio a mas proectos de softmod en la r36 Ultra.
+Este proceso tuvo que ser necesario por como ya mencione antes emuelec 4.7 que viene de fabrica esta muy capado y es casi imposible hacer las modificaciones que haremos mas adelante, espero aportar con mis conocimientos y aprender juntos cosas nuevas.
